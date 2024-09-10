@@ -1,0 +1,92 @@
+/* CSS - Estilização e Responsividade:
+
+    Estilização:
+
+        Adicione uma borda ao redor do formulário com cantos arredondados.
+        Utilize espaçamento adequado entre os campos.
+        Altere a cor de fundo e o estilo da fonte.
+        Aplique foco (:focus) nos campos, destacando-os quando o usuário estiver interagindo com eles.
+        Estilize o botão de envio para parecer um botão moderno (com sombras, efeito hover, e animação suave quando pressionado).
+Alinhe os rótulos (<label>) dos campos à esquerda e os inputs à direita, criando uma boa legibilidade */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%;      
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.checkbox-container {
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.checkbox-container input {
+    width: auto;
+    margin-right: 10px; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; 
+    display: flex;       
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

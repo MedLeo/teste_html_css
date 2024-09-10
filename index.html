@@ -1,0 +1,68 @@
+<!-- Formulário de Contato com Validação
+
+    Objetivo: Criar um formulário de contato, com validação.
+    Instruções:
+        Crie um formulário com os seguintes campos:
+            Nome (campo obrigatório)
+            E-mail (campo obrigatório e deve validar formato de e-mail)
+            Mensagem (campo obrigatório)
+            Telefone (campo opcional)
+            Assunto (campo de seleção com 3 opções: Dúvida, Suporte, Feedback)
+            Checkbox para aceitar os Termos de Uso (obrigatório)
+Inclua um botão de envio que só deve ser habilitado se todos os campos obrigatórios forem preenchidos corretamente.
+        Adicione um placeholder para cada campo.
+
+        Utilize HTML5 para adicionar validação dos campos obrigatórios e padrões de validação (como o campo de e-mail e número de telefone). -->
+
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Formulário de Contato</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <form id="contactForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+        
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+        
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+        
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">Selecione um assunto</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="suporte">Suporte</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+        
+                <div class="checkbox-container">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Aceito os Termos de Uso</label>
+                </div>        
+        
+                <div class="button-container">
+                    <button type="submit" disabled>Enviar</button>
+                </div>
+            </form>
+        
+            <script>
+                const form = document.getElementById('contactForm');
+                const submitButton = form.querySelector('button[type="submit"]');
+        
+                form.addEventListener('input', () => {
+                    const isValid = form.checkValidity();
+                    submitButton.disabled = !isValid;
+                });
+            </script>
+        </body>
+        </html>
+        
