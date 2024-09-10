@@ -1,1 +1,1 @@
-# teste_html_css
+# Repositório de estudos livres de HTML e CSS
